@@ -1,0 +1,61 @@
+{
+    "name": "mezzio/mezzio-template",
+    "description": "Template subcomponent for Mezzio",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "laminas",
+        "mezzio",
+        "template"
+    ],
+    "homepage": "https://mezzio.dev",
+    "support": {
+        "docs": "https://docs.mezzio.dev/mezzio/features/template/intro/",
+        "issues": "https://github.com/mezzio/mezzio-template/issues",
+        "source": "https://github.com/mezzio/mezzio-template",
+        "rss": "https://github.com/mezzio/mezzio-template/releases.atom",
+        "chat": "https://laminas.dev/chat",
+        "forum": "https://discourse.laminas.dev"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "^7.3 || ~8.0.0",
+        "laminas/laminas-zendframework-bridge": "^1.0"
+    },
+    "require-dev": {
+        "laminas/laminas-coding-standard": "~2.1.0",
+        "malukenho/docheader": "^0.1.6",
+        "phpunit/phpunit": "^9.3"
+    },
+    "suggest": {
+        "mezzio/mezzio-laminasviewrenderer": "^2.0 to use the laminas-view PhpRenderer template renderer",
+        "mezzio/mezzio-platesrenderer": "^2.0 to use the Plates template renderer",
+        "mezzio/mezzio-twigrenderer": "^2.0 to use the Twig template renderer"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mezzio\\Template\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MezzioTest\\Template\\": "test/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@license-check",
+            "@cs-check",
+            "@test"
+        ],
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
+        "license-check": "docheader check src/ test/"
+    },
+    "replace": {
+        "zendframework/zend-expressive-template": "^2.0.1"
+    }
+}
