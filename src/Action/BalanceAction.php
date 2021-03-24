@@ -6,13 +6,6 @@ use Hook\Response;
 
 final class BalanceAction extends AbstractAction
 {
-    private \Binance $api;
-
-    public function __construct(\Binance $api)
-    {
-        $this->api = $api;
-    }
-
     public function action(Request $req) : Response
     {
         $reply = $req->toResponse();
