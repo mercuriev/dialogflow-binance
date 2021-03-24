@@ -8,7 +8,8 @@
         "laminas/laminas-config-aggregator": "^1.4",
         "laminas/laminas-db": "^2.11",
         "laminas/laminas-log": "^2.13",
-        "laminas/laminas-http": "^2.14"
+        "laminas/laminas-http": "^2.14",
+        "larislackers/php-binance": "^1.0"
     },
     "autoload" : {
         "classmap" : ["src/"]
