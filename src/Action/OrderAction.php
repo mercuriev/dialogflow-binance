@@ -35,6 +35,8 @@ final class OrderAction extends AbstractAction
         $resp = json_decode($resp->getBody(), true);
         if (!$resp) throw new \RuntimeException($resp->getBody());
 
+        $res->addText(json_encode_pretty($resp));
+
         return $res;
     }
 }

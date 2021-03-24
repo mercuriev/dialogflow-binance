@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+require 'src/functions.php';
+
 use Laminas\ConfigAggregator\ConfigAggregator;
 use Laminas\ServiceManager\AbstractFactory\ReflectionBasedAbstractFactory;
 use Laminas\ConfigAggregator\ArrayProvider;
