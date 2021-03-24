@@ -90,6 +90,7 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         ),
         'M' => 
         array (
+            'Middleware\\' => 11,
             'Mezzio\\Template\\' => 16,
             'Mezzio\\Router\\' => 14,
             'Mezzio\\Helper\\' => 14,
@@ -117,6 +118,10 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         array (
             'Interop\\Container\\' => 18,
         ),
+        'H' => 
+        array (
+            'Hook\\' => 5,
+        ),
         'G' => 
         array (
             'GuzzleHttp\\Psr7\\' => 16,
@@ -139,6 +144,7 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         'A' => 
         array (
             'Aura\\Router\\' => 12,
+            'Action\\' => 7,
         ),
     );
 
@@ -235,6 +241,10 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'Middleware\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Middleware',
+        ),
         'Mezzio\\Template\\' => 
         array (
             0 => __DIR__ . '/..' . '/mezzio/mezzio-template/src',
@@ -316,6 +326,10 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
         ),
+        'Hook\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Hook',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -348,6 +362,10 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         array (
             0 => __DIR__ . '/..' . '/aura/router/src',
         ),
+        'Action\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Action',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -365,7 +383,11 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         'Action\\BalanceAction' => __DIR__ . '/../..' . '/src/Action/BalanceAction.php',
         'Binance' => __DIR__ . '/../..' . '/src/Binance.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Hook\\Request' => __DIR__ . '/../..' . '/src/Hook/Request.php',
+        'Hook\\Response' => __DIR__ . '/../..' . '/src/Hook/Response.php',
+        'Middleware\\AbstractMiddleware' => __DIR__ . '/../..' . '/src/Middleware/AbstractMiddleware.php',
         'Middleware\\AuthCallbackMiddleware' => __DIR__ . '/../..' . '/src/Middleware/AuthCallbackMiddleware.php',
+        'Middleware\\RequestMiddleware' => __DIR__ . '/../..' . '/src/Middleware/RequestMiddleware.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\ActualValueIsNotAnObjectException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Exception/ActualValueIsNotAnObjectException.php',

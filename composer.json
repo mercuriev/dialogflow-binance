@@ -12,6 +12,11 @@
         "larislackers/php-binance": "^1.0"
     },
     "autoload" : {
+        "psr-4" : {
+	        "Action\\" : "src/Action",
+            "Hook\\" : "src/Hook/",
+	        "Middleware\\" : "src/Middleware"
+        },
         "classmap" : ["src/"],
         "files" : [
             "test/AbstractTest.php"

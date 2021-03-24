@@ -69,6 +69,8 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
             }
         }
 
-        return new JsonResponse([], 404);
+        return new JsonResponse([
+            'action' => $action
+        ], 404);
     });
 };

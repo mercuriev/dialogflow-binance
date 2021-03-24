@@ -1,28 +1,38 @@
 {
-  "id": "bee33caa-1507-40a8-a321-17035d181549-421809c4",
-  "fulfillmentText": "",
-  "language_code": "en",
-  "queryText": "balance",
-  "webhookPayload": {},
-  "intentDetectionConfidence": 1,
-  "action": "balance",
-  "webhookSource": "",
-  "parameters": {},
-  "fulfillmentMessages": [
-    {
-      "text": {
-        "text": [
-          ""
-        ]
+  "responseId": "3d83098a-465a-4190-adf4-e7e574865a81-421809c4",
+  "queryResult": {
+    "queryText": "balance",
+    "action": "balance",
+    "parameters": {},
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            ""
+          ]
+        }
       }
-    }
-  ],
-  "webhookStatus": {
-    "webhookUsed": false
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/daniel-noonan-tipg/agent/sessions/0d089445-395f-ead2-031d-aab49f6311fd/contexts/__system_counters__",
+        "parameters": {
+          "no-input": 0,
+          "no-match": 0
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/daniel-noonan-tipg/agent/intents/89006e28-a199-4643-95be-4b7e0582895c",
+      "displayName": "balance"
+    },
+    "intentDetectionConfidence": 1,
+    "languageCode": "en"
   },
-  "intent": {
-    "isFallback": false,
-    "displayName": "balance",
-    "id": "89006e28-a199-4643-95be-4b7e0582895c"
-  }
+  "originalDetectIntentRequest": {
+    "source": "DIALOGFLOW_CONSOLE",
+    "payload": {}
+  },
+  "session": "projects/daniel-noonan-tipg/agent/sessions/0d089445-395f-ead2-031d-aab49f6311fd"
 }

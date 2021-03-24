@@ -2,6 +2,7 @@
 namespace Action;
 
 use Hook\Request;
+use Hook\Response;
 
 final class BalanceAction extends AbstractAction
 {
@@ -12,7 +13,7 @@ final class BalanceAction extends AbstractAction
         $this->api = $api;
     }
 
-    public function action(Request $req)
+    public function action(Request $req) : Response
     {
         $reply = $req->toResponse();
         $text = $this->buildReply();

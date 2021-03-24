@@ -3,7 +3,7 @@ namespace Hook;
 
 use Laminas\Diactoros\ServerRequest;
 
-class Request extends ServerRequest implements \ArrayAccess
+class Request extends \ArrayObject implements \ArrayAccess
 {
     public static function factory()
     {
@@ -102,11 +102,12 @@ class Request extends ServerRequest implements \ArrayAccess
 
     public function getAction() : ?string
     {
-        return @$this['queryResult']['action'];
+        return $this['queryResult']['action'];
     }
 
     public function getAllParams()
     {
+        var_dump($this);
         return @$this['queryResult']['parameters'];
     }
 
@@ -138,23 +139,4 @@ class Request extends ServerRequest implements \ArrayAccess
     {
         return (string) @$this['queryResult']['fulfillmentText'];
     }
-
-    public function offsetExists ($offset)
-    {
-        $body = $this->getParsedBody();
-        return isset($body[$offset]);
-    }
-	public function offsetGet ($offset)
-	{
-	    $body = $this->getParsedBody();
-        return $body[$offset];
-	}
-	public function offsetSet ($offset, $value)
-	{
-	    throw new \LogicException('Trying to change an immutable object.');
-	}
-	public function offsetUnset ($offset)
-	{
-	    throw new \LogicException('Trying to change an immutable object.');
-	}
 }

@@ -41,6 +41,7 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
 
     $app->pipe(BodyParamsMiddleware::class);
     $app->pipe(AuthCallbackMiddleware::class);
+    $app->pipe(\Middleware\RequestMiddleware::class);
 
     // Register the routing middleware in the middleware pipeline.
     // This middleware registers the Mezzio\Router\RouteResult request attribute.

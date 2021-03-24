@@ -28,6 +28,7 @@ return array(
     'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src/Prophecy'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
+    'Middleware\\' => array($baseDir . '/src/Middleware'),
     'Mezzio\\Template\\' => array($vendorDir . '/mezzio/mezzio-template/src'),
     'Mezzio\\Router\\' => array($vendorDir . '/mezzio/mezzio-aurarouter/src', $vendorDir . '/mezzio/mezzio-router/src'),
     'Mezzio\\Helper\\' => array($vendorDir . '/mezzio/mezzio-helpers/src'),
@@ -48,6 +49,7 @@ return array(
     'Laminas\\Db\\' => array($vendorDir . '/laminas/laminas-db/src'),
     'Laminas\\ConfigAggregator\\' => array($vendorDir . '/laminas/laminas-config-aggregator/src'),
     'Interop\\Container\\' => array($vendorDir . '/container-interop/container-interop/src/Interop/Container'),
+    'Hook\\' => array($baseDir . '/src/Hook'),
     'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
     'GuzzleHttp\\Promise\\' => array($vendorDir . '/guzzlehttp/promises/src'),
     'GuzzleHttp\\' => array($vendorDir . '/guzzlehttp/guzzle/src'),
@@ -56,4 +58,5 @@ return array(
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Brick\\VarExporter\\' => array($vendorDir . '/brick/varexporter/src'),
     'Aura\\Router\\' => array($vendorDir . '/aura/router/src'),
+    'Action\\' => array($baseDir . '/src/Action'),
 );
