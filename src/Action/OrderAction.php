@@ -35,7 +35,10 @@ final class OrderAction extends AbstractAction
         $resp = json_decode($resp->getBody(), true);
         if (!$resp) throw new \RuntimeException($resp->getBody());
 
-        $res->addText(json_encode_pretty($resp));
+        #$res->addText(json_encode_pretty($resp));
+        $res->addText(vsprintf('%u: %s %.2f CAKE for %.2f USDT - %s', [
+            $resp['orderId'], $resp['side'], $resp['origQty'], $resp['price'], $resp['status']
+        ]));
 
         return $res;
     }
