@@ -15,6 +15,7 @@ use Mezzio\Router\RouteResult;
 use Action\BalanceAction;
 use Laminas\Diactoros\Response\JsonResponse;
 use Action\OrderAction;
+use Action\ListAction;
 
 /**
  * Aura.Router route configuration
@@ -51,7 +52,8 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
     {
         $actions = [
             'balance'       => BalanceAction::class,
-            'order'         => OrderAction::class
+            'order'         => OrderAction::class,
+            'list'          => ListAction::class
         ];
 
         // actions definitions, routing features may be used
