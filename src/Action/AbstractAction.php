@@ -7,10 +7,20 @@ use Psr\Http\Message\ResponseInterface;
 use Laminas\Diactoros\Response\JsonResponse;
 use Hook\Request;
 use Hook\Response;
+use Laminas\Log\Logger;
 
 abstract class AbstractAction implements RequestHandlerInterface
 {
+    protected Logger $log;
+    protected \Binance $api;
+
     abstract function action(Request $query) : Response;
+
+    public function __construct(Logger $log, \Binance $api)
+    {
+        $this->log = $log;
+        $this->api = $api;
+    }
 
     public function handle(ServerRequestInterface $request) : ResponseInterface
     {

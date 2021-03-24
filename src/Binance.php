@@ -27,7 +27,7 @@ final class Binance extends BinanceApiContainer
         return $res;
     }
 
-    private function time() : int
+    public function time() : int
     {
         return intval(microtime(true) * 1000);
     }

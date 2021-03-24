@@ -14,6 +14,7 @@ use Laminas\Stratigility\EmptyPipelineHandler;
 use Mezzio\Router\RouteResult;
 use Action\BalanceAction;
 use Laminas\Diactoros\Response\JsonResponse;
+use Action\OrderAction;
 
 /**
  * Aura.Router route configuration
@@ -49,7 +50,8 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
     $app->any("/", function(RequestInterface $req) use ($factory, $container)
     {
         $actions = [
-            'balance'       => BalanceAction::class
+            'balance'       => BalanceAction::class,
+            'order'         => OrderAction::class
         ];
 
         // actions definitions, routing features may be used

@@ -1,0 +1,48 @@
+{
+  "responseId": "dae28720-fcdf-4f40-a536-60627e53dec5-421809c4",
+  "queryResult": {
+    "queryText": "sell 12.67 for 56.23",
+    "action": "order",
+    "parameters": {
+      "way": "sell",
+      "amount": 12.67,
+      "price": 56.23
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            ""
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/daniel-noonan-tipg/agent/sessions/0d089445-395f-ead2-031d-aab49f6311fd/contexts/__system_counters__",
+        "parameters": {
+          "no-input": 0,
+          "no-match": 0,
+          "way": "sell",
+          "way.original": "sell",
+          "amount": 12.67,
+          "amount.original": "12.67",
+          "price": 56.23,
+          "price.original": "56.23"
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/daniel-noonan-tipg/agent/intents/e1268dbc-23f8-4057-aaf0-7a09d14b1494",
+      "displayName": "Order"
+    },
+    "intentDetectionConfidence": 1,
+    "languageCode": "en"
+  },
+  "originalDetectIntentRequest": {
+    "source": "DIALOGFLOW_CONSOLE",
+    "payload": {}
+  },
+  "session": "projects/daniel-noonan-tipg/agent/sessions/0d089445-395f-ead2-031d-aab49f6311fd"
+}
