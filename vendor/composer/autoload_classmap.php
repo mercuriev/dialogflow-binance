@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Action\\AbstractAction' => $baseDir . '/src/Action/AbstractAction.php',
+    'Action\\BalanceAction' => $baseDir . '/src/Action/BalanceAction.php',
+    'Binance' => $baseDir . '/src/Binance.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Middleware\\AuthCallbackMiddleware' => $baseDir . '/src/Middleware/AuthCallbackMiddleware.php',
     'Normalizer' => $vendorDir . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',

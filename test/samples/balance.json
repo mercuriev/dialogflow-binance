@@ -1,0 +1,28 @@
+{
+  "id": "bee33caa-1507-40a8-a321-17035d181549-421809c4",
+  "fulfillmentText": "",
+  "language_code": "en",
+  "queryText": "balance",
+  "webhookPayload": {},
+  "intentDetectionConfidence": 1,
+  "action": "balance",
+  "webhookSource": "",
+  "parameters": {},
+  "fulfillmentMessages": [
+    {
+      "text": {
+        "text": [
+          ""
+        ]
+      }
+    }
+  ],
+  "webhookStatus": {
+    "webhookUsed": false
+  },
+  "intent": {
+    "isFallback": false,
+    "displayName": "balance",
+    "id": "89006e28-a199-4643-95be-4b7e0582895c"
+  }
+}

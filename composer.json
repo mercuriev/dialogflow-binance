@@ -12,7 +12,10 @@
         "larislackers/php-binance": "^1.0"
     },
     "autoload" : {
-        "classmap" : ["src/"]
+        "classmap" : ["src/"],
+        "files" : [
+            "test/AbstractTest.php"
+        ]
     },
     "require-dev": {
         "phpunit/phpunit": "^9"

@@ -6,19 +6,14 @@ use Mezzio\Application;
 use Mezzio\MiddlewareFactory;
 use Psr\Container\ContainerInterface;
 use Psr\Http\Message\RequestInterface;
-use Hook\Request;
-use Hook\JsonResponse;
-use Laminas\Log\Logger;
-use Laminas\Diactoros\Response\TextResponse;
-use Hook\Action\QuoteAction;
-use Hook\Action\Trade\TradeRequestAction;
 use Mezzio\Router\AuraRouter;
 use Mezzio\Router\Route;
-use Hook\Action\FallbackAction;
 use Laminas\Diactoros\ServerRequest;
 use Laminas\Diactoros\Uri;
 use Laminas\Stratigility\EmptyPipelineHandler;
 use Mezzio\Router\RouteResult;
+use Action\BalanceAction;
+use Laminas\Diactoros\Response\JsonResponse;
 
 /**
  * Aura.Router route configuration
@@ -51,12 +46,10 @@ use Mezzio\Router\RouteResult;
  * );
  */
 return static function (Application $app, MiddlewareFactory $factory, ContainerInterface $container): void {
-    $app->any("/{$_ENV['KEY']}", function(RequestInterface $req) use ($factory, $container)
+    $app->any("/", function(RequestInterface $req) use ($factory, $container)
     {
         $actions = [
-            'fallback'          => FallbackAction::class,
-            'quote'             => QuoteAction::class,
-            'trade.request'     => TradeRequestAction::class
+            'balance'       => BalanceAction::class
         ];
 
         // actions definitions, routing features may be used
@@ -76,6 +69,6 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
             }
         }
 
-        return new JsonResponse();
+        return new JsonResponse([], 404);
     });
 };

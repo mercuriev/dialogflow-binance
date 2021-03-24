@@ -38,15 +38,16 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         '44f5a19d6d262baf7ab55c8a8bb56f5a' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/middleware.legacy.php',
         'dd89a2771fc24829c6aade9a7786bd8f' => __DIR__ . '/..' . '/laminas/laminas-stratigility/src/functions/path.legacy.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
+        '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '3be16222a6efa6dd226a219eaaff823b' => __DIR__ . '/..' . '/ratchet/pawl/src/functions_include.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '12015786a5f2990d4244c42435db1ba0' => __DIR__ . '/..' . '/mezzio/mezzio/src/constants.php',
         '792a652af1b56b529053947cf6432b79' => __DIR__ . '/..' . '/mezzio/mezzio/src/constants.legacy.php',
+        'd46609d6a1a2a082938309883027f954' => __DIR__ . '/../..' . '/test/AbstractTest.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -360,6 +361,9 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
     );
 
     public static $classMap = array (
+        'Action\\AbstractAction' => __DIR__ . '/../..' . '/src/Action/AbstractAction.php',
+        'Action\\BalanceAction' => __DIR__ . '/../..' . '/src/Action/BalanceAction.php',
+        'Binance' => __DIR__ . '/../..' . '/src/Binance.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Middleware\\AuthCallbackMiddleware' => __DIR__ . '/../..' . '/src/Middleware/AuthCallbackMiddleware.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
