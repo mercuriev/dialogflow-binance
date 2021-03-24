@@ -1,38 +1,49 @@
 {
-  "responseId": "3d83098a-465a-4190-adf4-e7e574865a81-421809c4",
+  "responseId": "c3a4ccc1-8018-4be4-a8a5-b1931be49589-421809c4",
   "queryResult": {
-    "queryText": "balance",
+    "queryText": "Balance",
     "action": "balance",
-    "parameters": {},
+    "parameters": {
+    },
     "allRequiredParamsPresent": true,
-    "fulfillmentMessages": [
-      {
-        "text": {
-          "text": [
-            ""
-          ]
-        }
+    "fulfillmentMessages": [{
+      "text": {
+        "text": [""]
       }
-    ],
-    "outputContexts": [
-      {
-        "name": "projects/daniel-noonan-tipg/agent/sessions/0d089445-395f-ead2-031d-aab49f6311fd/contexts/__system_counters__",
-        "parameters": {
-          "no-input": 0,
-          "no-match": 0
-        }
+    }],
+    "outputContexts": [{
+      "name": "projects/daniel-noonan-tipg/agent/sessions/50f312a1-c0c9-3931-8e81-a2cfabbcd213/contexts/__system_counters__",
+      "parameters": {
+        "no-input": 0.0,
+        "no-match": 0.0
       }
-    ],
+    }],
     "intent": {
       "name": "projects/daniel-noonan-tipg/agent/intents/89006e28-a199-4643-95be-4b7e0582895c",
       "displayName": "balance"
     },
-    "intentDetectionConfidence": 1,
+    "intentDetectionConfidence": 1.0,
     "languageCode": "en"
   },
   "originalDetectIntentRequest": {
-    "source": "DIALOGFLOW_CONSOLE",
-    "payload": {}
+    "source": "telegram",
+    "payload": {
+      "data": {
+        "date": 1.616583749E9,
+        "from": {
+          "id": 7.22234409E8,
+          "language_code": "en",
+          "last_name": "Noonan",
+          "first_name": "Daniel"
+        },
+        "chat": {
+          "type": "private",
+          "id": "722234409"
+        },
+        "text": "Balance",
+        "message_id": 7.0
+      }
+    }
   },
-  "session": "projects/daniel-noonan-tipg/agent/sessions/0d089445-395f-ead2-031d-aab49f6311fd"
-}
+  "session": "projects/daniel-noonan-tipg/agent/sessions/50f312a1-c0c9-3931-8e81-a2cfabbcd213"
+} 
