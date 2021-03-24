@@ -520,7 +520,7 @@ class BinanceApiContainer
      * @return \Psr\Http\Message\ResponseInterface
      * @throws BinanceApiException
      */
-    private function _makeApiRequest($type, $endPoint, $securityType = 'NONE', $params = [])
+    public function _makeApiRequest($type, $endPoint, $securityType = 'NONE', $params = [])
     {
         $params = array_filter($params, 'strlen');
 
