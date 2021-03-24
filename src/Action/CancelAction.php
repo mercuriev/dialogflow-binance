@@ -12,7 +12,7 @@ final class CancelAction extends AbstractAction
         $res = $query->toResponse();
 
         try {
-            $this->api->_makeApiRequest('DELETE', 'openOrders');
+            $this->api->_makeApiRequest('DELETE', 'openOrders', 'SIGNED', ['symbol' => 'CAKEUSDT']);
         } catch (BinanceApiException $e) {
             $this->log->err($e->getMessage());
             $res->addText($e->getMessage());
