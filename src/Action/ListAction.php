@@ -16,13 +16,14 @@ final class ListAction extends AbstractAction
         ]);
 
         $list = json_decode($list->getBody(), true);
-        if (!$list) throw new \RuntimeException($list->getBody());
-
-        #$res->addText(json_encode_pretty($list));
-        foreach ($list as $resp) {
-            $res->addText(vsprintf('%u: %s %.2f CAKE for %.2f USDT - %s', [
-                $resp['orderId'], $resp['side'], $resp['origQty'], $resp['price'], $resp['status']
-            ]));
+        if (!$list) {
+            $res->addText('No orders.');
+        } else {
+            foreach ($list as $resp) {
+                $res->addText(vsprintf('%u: %s %.2f CAKE for %.2f USDT - %s', [
+                    $resp['orderId'], $resp['side'], $resp['origQty'], $resp['price'], $resp['status']
+                ]));
+            }
         }
 
         return $res;
