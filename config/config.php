@@ -18,6 +18,10 @@ $aggregator = new ConfigAggregator([
 
     new ArrayProvider([
         'key' => $_ENV['KEY'],
+        'binance' => [
+            'key'       => $_ENV['API_KEY'],
+            'secret'    => $_ENV['API_SECRET']
+        ],
         'db' => [
             'driver'    => 'Pdo',
             # cloud dsn: 'mysql:dbname=%s;unix_socket=%s/%s',
