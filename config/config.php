@@ -17,6 +17,11 @@ $aggregator = new ConfigAggregator([
     \Laminas\Log\ConfigProvider::class,
 
     new ArrayProvider([
+        // authorized telegram chat id
+        'auth_channels' => [
+            'tg.722234409', // Noonan
+            'tg.322021317', // merc
+        ],
         'key' => $_ENV['KEY'],
         'binance' => [
             'key'       => $_ENV['API_KEY'],

@@ -12,10 +12,8 @@ use Mezzio\Router\Middleware\MethodNotAllowedMiddleware;
 use Mezzio\Router\Middleware\RouteMiddleware;
 use Psr\Container\ContainerInterface;
 use Mezzio\Helper\BodyParams\BodyParamsMiddleware;
-use Hook\Middleware\RequestMiddleware;
-use Hook\Middleware\SessionMiddleware;
-use Hook\Middleware\MessageHistoryMiddleware;
 use Middleware\AuthCallbackMiddleware;
+use Middleware\TelegramAuthMiddleware;
 
 /**
  * Setup middleware pipeline:
@@ -42,6 +40,7 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
     $app->pipe(BodyParamsMiddleware::class);
     $app->pipe(AuthCallbackMiddleware::class);
     $app->pipe(\Middleware\RequestMiddleware::class);
+    $app->pipe(TelegramAuthMiddleware::class);
 
     // Register the routing middleware in the middleware pipeline.
     // This middleware registers the Mezzio\Router\RouteResult request attribute.
