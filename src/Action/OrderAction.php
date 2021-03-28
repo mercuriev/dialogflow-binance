@@ -15,7 +15,7 @@ final class OrderAction extends AbstractAction
         $price  = floatval($query->getParam('price'));
 
         $params = [
-            'symbol'        => 'CAKEUSDT',
+            'symbol'        => 'DOTUSDT',
             'side'          => strtoupper($query->getParam('way')),
             'type'          => 'LIMIT',
             'quantity'      => $amount,

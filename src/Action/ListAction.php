@@ -11,7 +11,7 @@ final class ListAction extends AbstractAction
         $res = $query->toResponse();
 
         $list = $this->api->getOpenOrders([
-            'symbol' => 'CAKEUSDT',
+            'symbol' => 'DOTUSDT',
             'timestamp' => $this->api->time()
         ]);
 

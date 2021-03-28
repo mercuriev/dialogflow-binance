@@ -13,7 +13,7 @@ final class CancelAction extends AbstractAction
 
         try {
             $this->api->_makeApiRequest('DELETE', 'openOrders', 'SIGNED', [
-                'symbol' => 'CAKEUSDT',
+                'symbol' => 'DOTUSDT',
                 'timestamp' => $this->api->time()
             ]);
         } catch (BinanceApiException $e) {
