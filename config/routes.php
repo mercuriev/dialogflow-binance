@@ -19,6 +19,7 @@ use Action\ListAction;
 use Action\CancelAction;
 use Action\SymbolAction;
 use Action\HistoryAction;
+use Action\FeeAction;
 
 /**
  * Aura.Router route configuration
@@ -59,7 +60,8 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
             'list'          => ListAction::class,
             'cancel'        => CancelAction::class,
             'symbol'        => SymbolAction::class,
-            'history'       => HistoryAction::class
+            'history'       => HistoryAction::class,
+            'fee'           => FeeAction::class
         ];
 
         // actions definitions, routing features may be used

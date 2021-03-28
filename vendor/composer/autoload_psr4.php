@@ -56,6 +56,7 @@ return array(
     'Fig\\Http\\Message\\' => array($vendorDir . '/fig/http-message-util/src'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
+    'Db\\' => array($baseDir . '/src/Db'),
     'Brick\\VarExporter\\' => array($vendorDir . '/brick/varexporter/src'),
     'Aura\\Router\\' => array($vendorDir . '/aura/router/src'),
     'Action\\' => array($baseDir . '/src/Action'),

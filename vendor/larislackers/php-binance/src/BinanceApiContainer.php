@@ -544,6 +544,11 @@ class BinanceApiContainer
                 $url = ConnectionDetails::API_URL . $endPoint;
                 $params['signature'] = hash_hmac('sha256', http_build_query($params), $this->_apiSecret);
                 break;
+            case 'SAPI_SIGNED':
+                $client = new Client(['headers' => ['X-MBX-APIKEY' => $this->_apiKey], 'http_errors' => false]);
+                $url = "https://api.binance.com/sapi/v1/sub-account/$endPoint";
+                $params['signature'] = hash_hmac('sha256', http_build_query($params), $this->_apiSecret);
+                break;
             case 'WEB':
                 $client = new Client(['http_errors' => false]);
                 $url = ConnectionDetails::API_URL . $endPoint;
@@ -563,9 +568,11 @@ class BinanceApiContainer
         }
 
         $response = $client->request(strtoupper($type), $url, $params);
+        print_r($url);
+        print_r($response->getBody()->getContents());
 
         if ($response->getStatusCode() < 200 || $response->getStatusCode() > 299) {
-            throw new BinanceApiException($response->getBody()->getContents());
+            throw new BinanceApiException($response->getBody()->getContents(), $response->getStatusCode());
         }
 
         return $response;

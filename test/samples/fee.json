@@ -1,0 +1,49 @@
+{
+  "responseId": "c3a4ccc1-8018-4be4-a8a5-b1931be49589-421809c4",
+  "queryResult": {
+    "queryText": "Fee",
+    "action": "fee",
+    "parameters": {
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [{
+      "text": {
+        "text": [""]
+      }
+    }],
+    "outputContexts": [{
+      "name": "projects/daniel-noonan-tipg/agent/sessions/50f312a1-c0c9-3931-8e81-a2cfabbcd213/contexts/__system_counters__",
+      "parameters": {
+        "no-input": 0.0,
+        "no-match": 0.0
+      }
+    }],
+    "intent": {
+      "name": "projects/daniel-noonan-tipg/agent/intents/89006e28-a199-4643-95be-4b7e0582895c",
+      "displayName": "balance"
+    },
+    "intentDetectionConfidence": 1.0,
+    "languageCode": "en"
+  },
+  "originalDetectIntentRequest": {
+    "source": "telegram",
+    "payload": {
+      "data": {
+        "date": 1.616583749E9,
+        "from": {
+          "id": 7.22234409E8,
+          "language_code": "en",
+          "last_name": "Noonan",
+          "first_name": "Daniel"
+        },
+        "chat": {
+          "type": "private",
+          "id": "722234409"
+        },
+        "text": "Balance",
+        "message_id": 7.0
+      }
+    }
+  },
+  "session": "projects/daniel-noonan-tipg/agent/sessions/50f312a1-c0c9-3931-8e81-a2cfabbcd213"
+} 

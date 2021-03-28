@@ -23,4 +23,10 @@ final class Db extends Adapter
         $this->query('UPDATE config SET value = ? WHERE id = "symbol"')->execute([$symbol]);
         return $this;
     }
+
+    public function getLastOrderId() : ?int
+    {
+        $oid = $this->query('SELECT MAX(order_id) AS oid FROM trade')->execute()->current();
+        return $oid['oid'];
+    }
 }

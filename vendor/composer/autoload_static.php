@@ -136,6 +136,7 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         array (
             'Doctrine\\Instantiator\\' => 22,
             'DeepCopy\\' => 9,
+            'Db\\' => 3,
         ),
         'B' => 
         array (
@@ -354,6 +355,10 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
+        'Db\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Db',
+        ),
         'Brick\\VarExporter\\' => 
         array (
             0 => __DIR__ . '/..' . '/brick/varexporter/src',
@@ -382,12 +387,20 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         'Action\\AbstractAction' => __DIR__ . '/../..' . '/src/Action/AbstractAction.php',
         'Action\\BalanceAction' => __DIR__ . '/../..' . '/src/Action/BalanceAction.php',
         'Action\\CancelAction' => __DIR__ . '/../..' . '/src/Action/CancelAction.php',
+        'Action\\FeeAction' => __DIR__ . '/../..' . '/src/Action/FeeAction.php',
+        'Action\\HistoryAction' => __DIR__ . '/../..' . '/src/Action/HistoryAction.php',
         'Action\\ListAction' => __DIR__ . '/../..' . '/src/Action/ListAction.php',
         'Action\\OrderAction' => __DIR__ . '/../..' . '/src/Action/OrderAction.php',
         'Action\\SymbolAction' => __DIR__ . '/../..' . '/src/Action/SymbolAction.php',
         'Binance' => __DIR__ . '/../..' . '/src/Binance.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Db' => __DIR__ . '/../..' . '/src/Db.php',
+        'Db\\AbstractModel' => __DIR__ . '/../..' . '/src/Db/AbstractModel.php',
+        'Db\\Exception\\ForeignKey' => __DIR__ . '/../..' . '/src/Db/Exception/ForeignKey.php',
+        'Db\\Exception\\RecordExists' => __DIR__ . '/../..' . '/src/Db/Exception/RecordExists.php',
+        'Db\\Exception\\RecordNotFound' => __DIR__ . '/../..' . '/src/Db/Exception/RecordNotFound.php',
+        'Db\\Exception\\UnknownColumn' => __DIR__ . '/../..' . '/src/Db/Exception/UnknownColumn.php',
+        'Db\\TableGateway' => __DIR__ . '/../..' . '/src/Db/TableGateway.php',
         'Hook\\Request' => __DIR__ . '/../..' . '/src/Hook/Request.php',
         'Hook\\Response' => __DIR__ . '/../..' . '/src/Hook/Response.php',
         'Middleware\\AbstractMiddleware' => __DIR__ . '/../..' . '/src/Middleware/AbstractMiddleware.php',

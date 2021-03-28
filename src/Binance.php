@@ -1,6 +1,7 @@
 <?php
 use Larislackers\BinanceApi\BinanceApiContainer;
 use Laminas\Log\Logger;
+use Larislackers\BinanceApi\Exception\BinanceApiException;
 
 final class Binance extends BinanceApiContainer
 {
@@ -25,6 +26,26 @@ final class Binance extends BinanceApiContainer
         });
 
         return $res;
+    }
+
+    /**
+     * Tx ID or null.
+     */
+    public function assetToMaster(string $symbol, float $amount) : ?int
+    {
+        try {
+            $res = $this->_makeApiRequest('POST', 'transfer/subToMaster', 'SAPI_SIGNED', [
+                'asset' => $symbol,
+                'amount' => $amount,
+                'timestamp' => $this->time()
+            ]);
+            $res = json_decode($res->getBody(), true);
+            return (int) $res['txnId'];
+        }
+        catch (BinanceApiException $e) {
+            $this->log->err($e->getCode() . ': ' . $e->getMessage());
+            return null;
+        }
     }
 
     public function time() : int
