@@ -1,0 +1,92 @@
+[
+  {
+    "id": "a49b0973-5480-4f6c-a79a-7d3fad860e98",
+    "data": [
+      {
+        "text": "buy",
+        "meta": "@way",
+        "alias": "way",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "0.02",
+        "meta": "@sys.number",
+        "alias": "amount",
+        "userDefined": true
+      },
+      {
+        "text": " for ",
+        "userDefined": false
+      },
+      {
+        "text": "20.22",
+        "meta": "@sys.number",
+        "alias": "price",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "77e57127-65ad-4451-9015-1bef2d07701c",
+    "data": [
+      {
+        "text": "sell",
+        "meta": "@way",
+        "alias": "way",
+        "userDefined": false
+      },
+      {
+        "text": " ",
+        "userDefined": false
+      },
+      {
+        "text": "14.52",
+        "meta": "@sys.number",
+        "alias": "amount",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "15173f71-4879-46d8-997d-24cba76dc463",
+    "data": [
+      {
+        "text": "buy",
+        "meta": "@way",
+        "alias": "way",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "361b4f82-dd63-4ea4-9af9-e4157b319d1f",
+    "data": [
+      {
+        "text": "sell",
+        "meta": "@way",
+        "alias": "way",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

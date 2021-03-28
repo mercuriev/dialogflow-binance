@@ -1,0 +1,28 @@
+[
+  {
+    "id": "9b34149e-7096-47be-b5d3-0e98d3972653",
+    "data": [
+      {
+        "text": "orders",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "6db1b83e-7b66-4b1c-ad68-66701c73f0b8",
+    "data": [
+      {
+        "text": "list",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

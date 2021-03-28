@@ -1,0 +1,34 @@
+[
+  {
+    "id": "f8733a98-04d3-437f-a078-6113af3f884e",
+    "data": [
+      {
+        "text": "symbol",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 1,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "8dcc6b3d-20db-42ce-9908-3baea4542806",
+    "data": [
+      {
+        "text": "symbol ",
+        "userDefined": false
+      },
+      {
+        "text": "BTCBUSD",
+        "meta": "@sys.any",
+        "alias": "symbol",
+        "userDefined": true
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

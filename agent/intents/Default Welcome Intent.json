@@ -1,0 +1,39 @@
+{
+  "id": "465107d0-a470-41bc-bd68-2fa3475ec3e6",
+  "name": "Default Welcome Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": "0",
+          "title": "",
+          "textToSpeech": "",
+          "lang": "en",
+          "speech": [
+            "Hi. To place a limit order say \"sell\" or \"buy\", then amount of CAKE followed by word \"for\" and price in USDT.\nFor example: \"buy 100 for 13\" or \"sell 50.25 for 14.50\"\n\nOr do it step by step by saying just \u0027sell\u0027 or \u0027buy\u0027.\n\nCan also check \u0027balance\u0027 and \u0027list\u0027 orders. Saying \u0027cancel\u0027 will cancel all orders."
+          ],
+          "condition": ""
+        }
+      ],
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ],
+  "conditionalResponses": [],
+  "condition": "",
+  "conditionalFollowupEvents": []
+}

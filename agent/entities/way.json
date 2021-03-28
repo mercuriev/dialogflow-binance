@@ -1,0 +1,9 @@
+{
+  "id": "4873fe56-fe6a-4c60-aa01-922c8ff4103a",
+  "name": "way",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFuzzyExtraction": false
+}
