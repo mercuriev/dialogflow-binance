@@ -14,8 +14,10 @@ final class OrderAction extends AbstractAction
         $amount = floatval($query->getParam('amount'));
         $price  = floatval($query->getParam('price'));
 
+        $symbol = $this->db->getSymbol();
+
         $params = [
-            'symbol'        => 'DOTUSDT',
+            'symbol'        => $symbol,
             'side'          => strtoupper($query->getParam('way')),
             'type'          => 'LIMIT',
             'quantity'      => $amount,
@@ -35,9 +37,8 @@ final class OrderAction extends AbstractAction
         $resp = json_decode($resp->getBody(), true);
         if (!$resp) throw new \RuntimeException($resp->getBody());
 
-        #$res->addText(json_encode_pretty($resp));
-        $res->addText(vsprintf('%u: %s %.2f CAKE for %.2f USDT - %s', [
-            $resp['orderId'], $resp['side'], $resp['origQty'], $resp['price'], $resp['status']
+        $res->addText(vsprintf('%s %s %u: %.2f for %.2f', [
+            $resp['side'], $symbol, $resp['orderId'], $resp['origQty'], $resp['price'],
         ]));
 
         return $res;

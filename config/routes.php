@@ -17,6 +17,7 @@ use Laminas\Diactoros\Response\JsonResponse;
 use Action\OrderAction;
 use Action\ListAction;
 use Action\CancelAction;
+use Action\SymbolAction;
 
 /**
  * Aura.Router route configuration
@@ -55,7 +56,8 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
             'balance'       => BalanceAction::class,
             'order'         => OrderAction::class,
             'list'          => ListAction::class,
-            'cancel'        => CancelAction::class
+            'cancel'        => CancelAction::class,
+            'symbol'        => SymbolAction::class
         ];
 
         // actions definitions, routing features may be used

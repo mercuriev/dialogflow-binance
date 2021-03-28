@@ -11,13 +11,15 @@ use Laminas\Log\Logger;
 
 abstract class AbstractAction implements RequestHandlerInterface
 {
+    protected \Db $db;
     protected Logger $log;
     protected \Binance $api;
 
     abstract function action(Request $query) : Response;
 
-    public function __construct(Logger $log, \Binance $api)
+    public function __construct(\Db $db, Logger $log, \Binance $api)
     {
+        $this->db  = $db;
         $this->log = $log;
         $this->api = $api;
     }

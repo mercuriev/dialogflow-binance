@@ -11,9 +11,11 @@ final class CancelAction extends AbstractAction
     {
         $res = $query->toResponse();
 
+        $symbol = $this->db->getSymbol();
+
         try {
             $this->api->_makeApiRequest('DELETE', 'openOrders', 'SIGNED', [
-                'symbol' => 'DOTUSDT',
+                'symbol' => $symbol,
                 'timestamp' => $this->api->time()
             ]);
         } catch (BinanceApiException $e) {

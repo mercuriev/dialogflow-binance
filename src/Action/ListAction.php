@@ -10,8 +10,10 @@ final class ListAction extends AbstractAction
     {
         $res = $query->toResponse();
 
+        $symbol = $this->db->getSymbol();
+
         $list = $this->api->getOpenOrders([
-            'symbol' => 'DOTUSDT',
+            'symbol' => $symbol,
             'timestamp' => $this->api->time()
         ]);
 
@@ -20,8 +22,8 @@ final class ListAction extends AbstractAction
             $res->addText('No orders.');
         } else {
             foreach ($list as $resp) {
-                $res->addText(vsprintf('%u: %s %.2f CAKE for %.2f USDT - %s', [
-                    $resp['orderId'], $resp['side'], $resp['origQty'], $resp['price'], $resp['status']
+                $res->addText(vsprintf('%s %s %u: %.2f for %.2f', [
+                    $resp['side'], $symbol, $resp['orderId'], $resp['origQty'], $resp['price'],
                 ]));
             }
         }
