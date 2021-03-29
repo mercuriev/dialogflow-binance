@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" bootstrap="vendor/autoload.php" colors="true" cacheResultFile="/tmp/.phpunit.cache" defaultTestSuite="app">
+  <coverage processUncoveredFiles="true">
+    <include>
+      <directory suffix=".php">./src</directory>
+    </include>
+  </coverage>
+  <testsuites>
+    <testsuite name="app">
+      <directory>./test/AppTest</directory>
+    </testsuite>
+    <testsuite name="x">
+      <directory>./test/XTest</directory>
+    </testsuite>
+  </testsuites>
+  <php>
+    <env name="SUPERVISOR_GROUP_NAME" value="phpunit"/>
+    <env name="AMQP" value="true"/>
+    <env name="SUPERVISOR_PROCESS_NAME" value="phpunit-0"/>
+    <env name="PHPUNIT" value="true"/>
+  </php>
+</phpunit>
