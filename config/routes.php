@@ -20,6 +20,7 @@ use Action\CancelAction;
 use Action\SymbolAction;
 use Action\HistoryAction;
 use Action\FeeAction;
+use Handler\SyncHandler;
 
 /**
  * Aura.Router route configuration
@@ -85,4 +86,6 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
             'action' => $action
         ], 404);
     });
+
+    $app->post('/sync/'.$_ENV['API_KEY'], SyncHandler::class);
 };

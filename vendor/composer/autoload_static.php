@@ -121,6 +121,7 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         'H' => 
         array (
             'Hook\\' => 5,
+            'Handler\\' => 8,
         ),
         'G' => 
         array (
@@ -331,6 +332,10 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         array (
             0 => __DIR__ . '/../..' . '/src/Hook',
         ),
+        'Handler\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Handler',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -401,6 +406,7 @@ class ComposerStaticInit0af89f8fb2cb98d72b9037042b2b41b2
         'Db\\Exception\\RecordNotFound' => __DIR__ . '/../..' . '/src/Db/Exception/RecordNotFound.php',
         'Db\\Exception\\UnknownColumn' => __DIR__ . '/../..' . '/src/Db/Exception/UnknownColumn.php',
         'Db\\TableGateway' => __DIR__ . '/../..' . '/src/Db/TableGateway.php',
+        'Handler\\SyncHandler' => __DIR__ . '/../..' . '/src/Handler/SyncHandler.php',
         'Hook\\Request' => __DIR__ . '/../..' . '/src/Hook/Request.php',
         'Hook\\Response' => __DIR__ . '/../..' . '/src/Hook/Response.php',
         'Middleware\\AbstractMiddleware' => __DIR__ . '/../..' . '/src/Middleware/AbstractMiddleware.php',

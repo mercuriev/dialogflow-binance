@@ -24,9 +24,9 @@
         "parameters": {
           "no-input": 0,
           "no-match": 0,
-          "way": "sell",
+          "way": "buy",
           "way.original": "sell",
-          "amount": 12.67,
+          "amount": 0.01,
           "amount.original": "12.67",
           "price": 56.23,
           "price.original": "56.23"

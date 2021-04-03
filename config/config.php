@@ -24,6 +24,7 @@ $aggregator = new ConfigAggregator([
             'tg.722234409', // Noonan
             'tg.322021317', // merc
         ],
+        'fee' => 0.0035, // incl. binance fee
         'key' => $_ENV['KEY'],
         'binance' => [
             'key'       => $_ENV['API_KEY'],

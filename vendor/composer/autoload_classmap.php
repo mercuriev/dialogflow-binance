@@ -23,6 +23,7 @@ return array(
     'Db\\Exception\\RecordNotFound' => $baseDir . '/src/Db/Exception/RecordNotFound.php',
     'Db\\Exception\\UnknownColumn' => $baseDir . '/src/Db/Exception/UnknownColumn.php',
     'Db\\TableGateway' => $baseDir . '/src/Db/TableGateway.php',
+    'Handler\\SyncHandler' => $baseDir . '/src/Handler/SyncHandler.php',
     'Hook\\Request' => $baseDir . '/src/Hook/Request.php',
     'Hook\\Response' => $baseDir . '/src/Hook/Response.php',
     'Middleware\\AbstractMiddleware' => $baseDir . '/src/Middleware/AbstractMiddleware.php',

@@ -16,6 +16,7 @@
 	        "Action\\" : "src/Action",
 	        "Db\\" : "src/Db",
             "Hook\\" : "src/Hook/",
+            "Handler\\" : "src/Handler/",
 	        "Middleware\\" : "src/Middleware"
         },
         "classmap" : ["src/"],
