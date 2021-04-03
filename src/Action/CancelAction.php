@@ -18,7 +18,9 @@ final class CancelAction extends AbstractAction
                 'symbol' => $symbol,
                 'timestamp' => $this->api->time()
             ]);
-        } catch (BinanceApiException $e) {
+            $this->db->query('UPDATE `order` SET status = "CANCELED" WHERE symbol = ?')->execute([$symbol]);
+        }
+        catch (BinanceApiException $e) {
             $this->log->err($e->getMessage());
             $res->addText($e->getMessage());
             return $res;
@@ -29,4 +31,3 @@ final class CancelAction extends AbstractAction
         return $res;
     }
 }
-
