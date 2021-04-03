@@ -8,7 +8,7 @@ final class SymbolAction extends AbstractAction
 {
     public function action(Request $query) : Response
     {
-        $newSymbol = $query->getParam('symbol');
+        $newSymbol = strtoupper($query->getParam('symbol'));
         if ($newSymbol) {
             $this->db->setSymbol($newSymbol);
         }
