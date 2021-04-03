@@ -87,5 +87,5 @@ return static function (Application $app, MiddlewareFactory $factory, ContainerI
         ], 404);
     });
 
-    $app->post('/sync/'.$_ENV['API_KEY'], SyncHandler::class);
+    $app->post('/sync', SyncHandler::class);
 };
