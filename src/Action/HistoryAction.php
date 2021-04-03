@@ -23,7 +23,7 @@ final class HistoryAction extends AbstractAction
             $res->addText('No orders.');
         } else {
             foreach ($list as $resp) {
-                $res->addText(vsprintf('%s %s %u: %0.6f for %0.6f - %s', [
+                $res->addText(vsprintf('%s %s %u: %.7g for %.7g - %s', [
                     $resp['side'], $symbol, $resp['orderId'], $resp['origQty'], $resp['price'], $resp['status']
                 ]));
             }
