@@ -21,7 +21,6 @@ $aggregator = new ConfigAggregator([
     new ArrayProvider([
         // authorized telegram chat id
         'auth_channels' => [
-            'DIALOGFLOW_CONSOLE',
             'tg.722234409', // Noonan
             'tg.322021317', // merc
         ],
