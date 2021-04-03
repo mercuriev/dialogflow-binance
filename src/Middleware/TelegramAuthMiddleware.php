@@ -20,6 +20,11 @@ final class TelegramAuthMiddleware extends AbstractMiddleware
     {
         $req = $request->getAttribute(Request::class);
 
+        // without JSON body /sync runs
+        if (!$req) {
+            return $handler->handle($request);
+        }
+
         $id = $req->getChannel();
         if (in_array($id, $this->ids) || 0 === strpos($id, 'DIALOGFLOW_CONSOLE.')) {
             return $handler->handle($request);
