@@ -22,7 +22,7 @@ final class ListAction extends AbstractAction
             $res->addText('No orders.');
         } else {
             foreach ($list as $resp) {
-                $res->addText(vsprintf('%s %s %u: %.7g for %.7g', [
+                $res->addText(vsprintf('%s %s %u: %.8g for %.8g', [
                     $resp['side'], $symbol, $resp['orderId'], $resp['origQty'], $resp['price'],
                 ]));
             }

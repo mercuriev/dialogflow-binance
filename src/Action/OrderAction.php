@@ -49,7 +49,7 @@ final class OrderAction extends AbstractAction
             $this->log->warn($e->getMessage());
         }
 
-        $res->addText(vsprintf('%s %s %u: %.7g for %.7g', [
+        $res->addText(vsprintf('%s %s %u: %.8g for %.8g', [
             $order['side'], $symbol, $order['orderId'], $order['origQty'], $order['price'],
         ]));
 

@@ -54,7 +54,7 @@ final class FeeAction extends AbstractAction
 
         if (count($unpaidFees)) {
             foreach ($unpaidFees as $asset => $fee) {
-                $msg = sprintf('Unpaid fee %.7g of %s', $fee, $asset);
+                $msg = sprintf('Unpaid fee %.8g of %s', $fee, $asset);
                 $res->addText($msg);
             }
         } else {
