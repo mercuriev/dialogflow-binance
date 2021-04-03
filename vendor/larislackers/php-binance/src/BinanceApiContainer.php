@@ -568,8 +568,8 @@ class BinanceApiContainer
         }
 
         $response = $client->request(strtoupper($type), $url, $params);
-        print_r($url);
-        print_r($response->getBody()->getContents());
+        #print_r($url);
+        #print_r($response->getBody()->getContents());
 
         if ($response->getStatusCode() < 200 || $response->getStatusCode() > 299) {
             throw new BinanceApiException($response->getBody()->getContents(), $response->getStatusCode());
