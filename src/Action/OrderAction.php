@@ -37,7 +37,7 @@ final class OrderAction extends AbstractAction
         $resp = json_decode($resp->getBody(), true);
         if (!$resp) throw new \RuntimeException($resp->getBody());
 
-        $res->addText(vsprintf('%s %s %u: %.2f for %.2f', [
+        $res->addText(vsprintf('%s %s %u: %0.6f for %0.6f', [
             $resp['side'], $symbol, $resp['orderId'], $resp['origQty'], $resp['price'],
         ]));
 
