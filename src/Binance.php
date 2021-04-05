@@ -34,7 +34,7 @@ final class Binance extends BinanceApiContainer
     public function assetToMaster(string $symbol, float $amount) : ?int
     {
         try {
-            $res = $this->_makeApiRequest('POST', 'transfer/subToMaster', 'SAPI_SIGNED', [
+            $res = $this->_makeApiRequest('POST', 'transfer/subToMaster', 'SAPI_SIGNED', $req = [
                 'asset' => $symbol,
                 'amount' => $amount,
                 'timestamp' => $this->time()
@@ -43,7 +43,7 @@ final class Binance extends BinanceApiContainer
             return (int) $res['txnId'];
         }
         catch (BinanceApiException $e) {
-            $this->log->err($e->getCode() . ': ' . $e->getMessage());
+            $this->log->err($e->getCode() . ': ' . $e->getMessage() . '. Req: '.json_encode_pretty($req));
             return null;
         }
     }
