@@ -77,7 +77,11 @@ class SyncHandler implements RequestHandlerInterface
         $table = new TableGateway('trade', $this->db);
         foreach ($trades as $trade) {
             try {
-                $fee = round($trade['qty'] * $this->fee - $trade['commission'], 8, PHP_ROUND_HALF_UP);
+                if ($trade['isBuyer']) {
+                    $fee = round($trade['qty'] * $this->fee - $trade['commission'], 8, PHP_ROUND_HALF_UP);
+                } else {
+                    $fee = round($trade['quoteQty'] * $this->fee - $trade['commission'], 8, PHP_ROUND_HALF_UP);
+                }
                 $table->insert([
                     'id' => $trade['id'],
                     'order_id' => $trade['orderId'],
