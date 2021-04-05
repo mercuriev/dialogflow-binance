@@ -28,8 +28,6 @@ class SyncHandler implements RequestHandlerInterface
         foreach ($new as $order) {
             $apiOrder = $this->getOrder($order['id']);
             if ($apiOrder) {
-                print_r($apiOrder);
-
                 switch ($apiOrder['status']) {
                     case 'NEW': break; // no changes
 
