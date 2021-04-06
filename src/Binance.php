@@ -40,6 +40,7 @@ final class Binance extends BinanceApiContainer
                 'timestamp' => $this->time()
             ]);
             $res = json_decode($res->getBody(), true);
+            $this->log->debug("Sent to master: $amount $symbol");
             return (int) $res['txnId'];
         }
         catch (BinanceApiException $e) {
