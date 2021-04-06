@@ -24,13 +24,15 @@ class SyncHandler implements RequestHandlerInterface
     {
         // look for status updates among NEW orders in db
         $orders = new TableGateway('order', $this->db);
-        $new = $orders->select(['status' => 'NEW']);
+
+        $new = $this->db->query('SELECT * FROM `order` WHERE status IN ("NEW", "PARTIALL")')->execute();
         foreach ($new as $order) {
             $apiOrder = $this->getOrder($order['id']);
             if ($apiOrder) {
                 switch ($apiOrder['status']) {
                     case 'NEW': break; // no changes
 
+                    case 'PARTIALL':
                     case 'FILLED':
                         $this->filledOrder($apiOrder);
                         // no break to save all statuses
