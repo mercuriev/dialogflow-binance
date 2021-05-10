@@ -21,17 +21,25 @@ final class OrderAction extends AbstractAction
         $params = [
             'symbol'        => $symbol,
             'side'          => strtoupper($query->getParam('way')),
-            'type'          => 'LIMIT',
+            'timestamp'     => $this->api->time(),
             'quantity'      => $amount,
-            'price'         => $price,
-            'timeInForce'   => 'gtc',
-            'timestamp'     => $this->api->time()
         ];
+        if ($price > 0) {
+            $params += [
+                'type'          => 'LIMIT',
+                'price'         => $price,
+                'timeInForce'   => 'gtc',
+            ];
+        } else {
+            $params['type'] = 'MARKET';
+        }
+
+        var_dump($params);
 
         try {
             $order = $this->api->postOrder($params);
             $order = json_decode($order->getBody(), true);
-            if (!$order) throw new \RuntimeException($order->getBody());
+            if (!$order) throw new \RuntimeException('Empty reply');
         } catch (BinanceApiException $e) {
             $this->log->err($e->getMessage());
             $res->addText($e->getMessage());

@@ -1,0 +1,54 @@
+{
+  "responseId": "4f4965fb-24cd-4d73-afcc-c11b5bcc29a7-318e370a",
+  "queryResult": {
+    "queryText": "buy 1.1",
+    "action": "order",
+    "parameters": {
+      "way": "buy",
+      "amount": 1.1,
+      "price": ""
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            ""
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/daniel-noonan-tipg/agent/sessions/ce030761-1f88-28c1-49ae-3f94e72f51d3/contexts/__system_counters__",
+        "parameters": {
+          "no-input": 0,
+          "no-match": 0,
+          "way": "buy",
+          "way.original": "buy",
+          "amount": 1.1,
+          "amount.original": "1.1",
+          "price": "",
+          "price.original": ""
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/daniel-noonan-tipg/agent/intents/e1268dbc-23f8-4057-aaf0-7a09d14b1494",
+      "displayName": "Create Order"
+    },
+    "intentDetectionConfidence": 1,
+    "languageCode": "en",
+    "sentimentAnalysisResult": {
+      "queryTextSentiment": {
+        "score": 0.2,
+        "magnitude": 0.2
+      }
+    }
+  },
+  "originalDetectIntentRequest": {
+    "source": "DIALOGFLOW_CONSOLE",
+    "payload": {}
+  },
+  "session": "projects/daniel-noonan-tipg/agent/sessions/ce030761-1f88-28c1-49ae-3f94e72f51d3"
+}

@@ -49,7 +49,12 @@ class Request extends \ArrayObject implements \ArrayAccess
     public static function fromJson($body) : self
     {
         $ar = json_decode($body, true);
-        return (new static($ar))->withParsedBody($ar);
+        return (new static($ar));
+    }
+
+    public static function fromFile(string $path) : self
+    {
+        return self::fromJson(file_get_contents($path));
     }
 
     public function toResponse($copymsgs = false) : Response
@@ -107,7 +112,6 @@ class Request extends \ArrayObject implements \ArrayAccess
 
     public function getAllParams()
     {
-        var_dump($this);
         return @$this['queryResult']['parameters'];
     }
 
