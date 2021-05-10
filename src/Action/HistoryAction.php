@@ -22,6 +22,7 @@ final class HistoryAction extends AbstractAction
         if (!$list) {
             $res->addText('No orders.');
         } else {
+            $this->log->debug(json_encode_pretty($list));
             foreach ($list as $resp) {
                 $res->addText(vsprintf('%s %s %u: %.8g for %.8g - %s', [
                     $resp['side'], $symbol, $resp['orderId'], $resp['origQty'], $resp['price'], $resp['status']
