@@ -34,8 +34,6 @@ final class OrderAction extends AbstractAction
             $params['type'] = 'MARKET';
         }
 
-        var_dump($params);
-
         try {
             $order = $this->api->postOrder($params);
             $order = json_decode($order->getBody(), true);
