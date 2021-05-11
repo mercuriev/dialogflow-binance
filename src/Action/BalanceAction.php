@@ -19,7 +19,7 @@ final class BalanceAction extends AbstractAction
         $balances = $this->api->getBalances();
         $msg = "Available coins:\n";
         foreach ($balances as $coin) {
-            $msg .= sprintf("%-6s: %.8g\n", $coin['asset'], $coin['free'] + $coin['locked']);
+            $msg .= sprintf("%-6s: %.18g\n", $coin['asset'], $coin['free'] + $coin['locked']);
         }
         return $msg;
     }
