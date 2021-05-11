@@ -27,7 +27,7 @@ final class OrderAction extends AbstractAction
         if ($price > 0) {
             $params += [
                 'type'          => 'LIMIT',
-                'price'         => $price,
+                'price'         => $price = sprintf('%f', $price),
                 'timeInForce'   => 'gtc',
             ];
         } else {
