@@ -44,6 +44,7 @@ final class OrderAction extends AbstractAction
         }
 
         try {
+            $this->log->debug("Request: ". print_r($params, true));
             $order = $this->api->postOrder($params);
             $order = json_decode($order->getBody(), true);
             if (!$order) throw new \RuntimeException('Empty reply');
