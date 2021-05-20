@@ -16,6 +16,23 @@ final class Binance extends BinanceApiContainer
         );
     }
 
+    public function allIn(string $symbol, string $side) : float
+    {
+        $side = strtoupper($side);
+        $balances = $this->getBalances();
+        foreach ($balances as $balance) {
+            // Symbol starts with asset name
+            if ($side == 'SELL' && 0 === strpos($symbol, $balance['asset'])) {
+                return $balance['free'];
+            }
+            // Symbol ends with asset name
+            if ($side == 'BUY' && preg_match("/{$balance['asset']}$/i", $symbol)) {
+                return $balance['free'];
+            }
+        }
+        throw new \UnderflowException("No free assets to $side on $symbol.");
+    }
+
     public function getBalances() : array
     {
         $res = $this->getAccount(['timestamp' => $this->time()]);

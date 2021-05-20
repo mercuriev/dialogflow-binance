@@ -12,15 +12,24 @@ final class OrderAction extends AbstractAction
     public function action(Request $query) : Response
     {
         $res = $query->toResponse();
-
-        $amount = floatval($query->getParam('amount'));
-        $price  = floatval($query->getParam('price'));
-
         $symbol = $this->db->getSymbol();
+
+        $side   = strtoupper($query->getParam('way'));
+        $price  = floatval($query->getParam('price'));
+        $amount = $query->getParam('amount');
+        if (is_string($amount) && 'all' == strtolower($amount)) {
+            try {
+                $amount = $this->api->allIn($symbol, $side);
+            } catch (\UnderflowException $e) {
+                $this->log->err($e->getMessage());
+                $res->addText($e->getMessage());
+                return $res;
+            }
+        }
 
         $params = [
             'symbol'        => $symbol,
-            'side'          => strtoupper($query->getParam('way')),
+            'side'          => $side,
             'timestamp'     => $this->api->time(),
             'quantity'      => $amount,
         ];
