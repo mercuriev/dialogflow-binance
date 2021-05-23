@@ -25,6 +25,7 @@ final class HistoryAction extends AbstractAction
             $this->log->debug(json_encode_pretty($list));
             foreach ($list as $resp) {
                 $price = $resp['price'] > 0 ? $resp['price'] : ($resp['cummulativeQuoteQty'] / $resp['executedQty']);
+                $price = rtrim(number_format($price, 12), 0);
                 $res->addText(vsprintf("%s %s %u: %.12g for $price - %s", [
                     $resp['side'], $symbol, $resp['orderId'], $resp['origQty'], $resp['status']
                 ]));
