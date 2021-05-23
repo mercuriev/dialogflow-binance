@@ -66,8 +66,8 @@ final class OrderAction extends AbstractAction
         }
 
         $price = $order['price'] > 0 ? $order['price'] : ($order['cummulativeQuoteQty'] / $order['executedQty']);
-        $res->addText(vsprintf('%s %s %u: %.12g for %.8g', [
-            $order['side'], $symbol, $order['orderId'], $order['origQty'], $price,
+        $res->addText(vsprintf("%s %s %u: %.12g for $price", [
+            $order['side'], $symbol, $order['orderId'], $order['origQty']
         ]));
 
         return $res;
