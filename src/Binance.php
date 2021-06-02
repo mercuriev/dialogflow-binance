@@ -23,14 +23,23 @@ final class Binance extends BinanceApiContainer
         foreach ($balances as $balance) {
             // Symbol starts with asset name
             if ($side == 'SELL' && 0 === strpos($symbol, $balance['asset'])) {
-                return $balance['free'];
+                $all = $balance['free'];
             }
             // Symbol ends with asset name
             if ($side == 'BUY' && preg_match("/{$balance['asset']}$/i", $symbol)) {
-                return $balance['free'];
+                $all = $balance['free'];
             }
         }
-        throw new \UnderflowException("No free assets to $side on $symbol.");
+        if (isset($all)) {
+            switch (strtoupper($symbol)) {
+                case 'SHIBUSDT': $all = (int) $all;
+                default:
+                    return $all;
+            }
+        }
+        else {
+            throw new \UnderflowException("No free assets to $side on $symbol.");
+        }
     }
 
     public function getBalances() : array
