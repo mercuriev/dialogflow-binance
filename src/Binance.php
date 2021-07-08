@@ -54,6 +54,25 @@ final class Binance extends BinanceApiContainer
         return $res;
     }
 
+    public function assetToPeer(string $symbol, float $amount) : ?int
+    {
+        try {
+            $res = $this->_makeApiRequest('POST', 'asset/transfer', 'SAPI_SIGNED', $req = [
+                'type'      => 'MAIN_C2C',
+                'asset'     => $symbol,
+                'amount'    => $amount,
+                'timestamp' => $this->time()
+            ]);
+            $res = json_decode($res->getBody(), true);
+            $this->log->debug("Sent to master: $amount $symbol");
+            return (int) $res['tranId'];
+        }
+        catch (BinanceApiException $e) {
+            $this->log->err($e->getCode() . ': ' . $e->getMessage() . '. Req: '.json_encode_pretty($req));
+            return null;
+        }
+    }
+
     /**
      * Tx ID or null.
      */

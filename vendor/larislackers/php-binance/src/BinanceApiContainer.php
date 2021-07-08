@@ -546,7 +546,7 @@ class BinanceApiContainer
                 break;
             case 'SAPI_SIGNED':
                 $client = new Client(['headers' => ['X-MBX-APIKEY' => $this->_apiKey], 'http_errors' => false]);
-                $url = "https://api.binance.com/sapi/v1/sub-account/$endPoint";
+                $url = "https://api.binance.com/sapi/v1/$endPoint";
                 $params['signature'] = hash_hmac('sha256', http_build_query($params), $this->_apiSecret);
                 break;
             case 'WEB':
